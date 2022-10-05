@@ -9,9 +9,9 @@ main:(stdio)
 ```
 
 There are a few basic rules.
-1. use `:` sign for all kinds of assingments.
+1. `:` is used for all kinds of assingments.
 2. expressions after the `:` means data.
-3. every data has it's own representation.
+3. every data has its own representation.
 
 ```rust
 a:int=1
