@@ -35,7 +35,7 @@ Accesing declared data is the same as the languages we're used to.
 
 Type and Class are data, with a notion of "Storage Class" denoted by `@`.
 
-Here are the example of type & class definitions.
+Here is the example of type & class declaration with Storage Class.
 
 ```rust
 int@type:i32
@@ -52,7 +52,7 @@ Naming conventions will determine whether the field is accessible.
 The class example above implicitly defined accessibility of `c:Int` members:
 
 - `c.data` : This is an error, as symbol not defined as `.data`.
-- `cdata` : This is regarded as a new variable, not `a`'s member.
+- `cdata` : This is regarded as a new variable, not `c`'s member.
 - `c.equals(2)` : This is a valid access, like a public method.
 
 In this way, data is capsulized without explicitly notating `public` or `private`.
