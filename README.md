@@ -59,9 +59,9 @@ In this way, data is capsulized without explicitly notating `public` or `private
 Storage Classes are also used for designating the data lifetime and scope
 
 ```rust
-globalString@data:"string at data segement"
-localString@stack:"string at stack segment"
-dynamicString@heap:"string at heap segment"
+globalString@data = "string at data segement"
+localString@stack = "string at stack segment"
+dynamicString@heap = "string at heap segment"
 ```
 
 ## Conditional `?`
