@@ -33,13 +33,9 @@ Int@class:(value:int)[
 Name will implicitly determine whether the field is accessible.
 The class example above naturally defined accessibility of members.
 
-```
-num:Int(1)
-num.data # This is error, as symbol not defined as `.data`
-numdata # This is regarded as but a new variable, not `a's member, 
-num.equals(2) # This is valid
-```
-
+- `num.data` : This is an error, as symbol not defined as `.data`.
+- `numdata` : This is regarded as a new variable, not `a`'s member.
+- `num.equals(2)` : This is valid access, like a public method.
 
 Storage class is also used for designating the data lifetime and scope
 
