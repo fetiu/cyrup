@@ -45,13 +45,16 @@ Int@class:(value:int)[
 ]
 ```
 
-Name will implicitly determine whether the field is accessible.
+Naming conventions will determine whether the field is accessible.
 
-The class example above naturally defined accessibility of `num:Int` members:
+The class example above implicitly defined accessibility of `num:Int` members:
 
 - `num.data` : This is an error, as symbol not defined as `.data`.
 - `numdata` : This is regarded as a new variable, not `a`'s member.
-- `num.equals(2)` : This is valid access, like a public method.
+- `num.equals(2)` : This is a valid access, like a public method.
+
+In this way, data is capsulized without explicitly notating `public` or `private`.
+
 
 Storage Classes are also used for designating the data lifetime and scope
 
