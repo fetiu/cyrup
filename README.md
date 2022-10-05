@@ -63,10 +63,12 @@ dynamicString@heap="string at heap segment"
 
 ## Conditional `?`
 
-Use `?` instead of `if`. It's not a ternary operator `condition? a : b`.
-There is only one operand required, like `condition? a`.
-Use `||` instead of `else`, just concatenate behind the expression above.
-```
+`if` statement is replaced with `?`. It's differnt from the ternary operator `condition? x : y`.
+
+There is only one operand required for `?`, like `condition? x`.
+
+There is no `else`, use `||` instead. Concatenate `|| y` behind the expression above.
+```rust
 (a > b)? {
     diff = a - b
 } || (a < b)? {
