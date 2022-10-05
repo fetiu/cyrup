@@ -39,7 +39,7 @@ Type and Class are data, with a notion of "Storage Class" denoted by `@`
 int@type:i32
 Int@class:(value:int)[
     data:int = value
-    .equals:(value:int) {
+    .equals:(value:int)bool{
         ->(data==value)
     }
 ]
