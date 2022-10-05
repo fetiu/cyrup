@@ -30,10 +30,21 @@ Int@class:(value:int)[
 ]
 ```
 
+Name will implicitly determine whether the field is accessible.
+The class example above naturally defined accessibility of members.
+
+```
+num:Int(1)
+num.data # This is error, as symbol not defined as `.data`
+numdata # This is regarded as but a new variable, not `a's member, 
+num.equals(2) # This is valid
+```
+
+
 Storage class is also used for designating the data lifetime and scope
 
 ```rust
-global_string@data="string at data segement"
-local_string@stack="string at stack segment"
-dynamic_string@heap="string at heap segment"
+globalString@data="string at data segement"
+localString@stack="string at stack segment"
+dynamicString@heap="string at heap segment"
 ```
