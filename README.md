@@ -20,7 +20,7 @@ c:Int(1)
 swap:(a:int,b:int){a, b = b, a}
 ```
 
-Type and Class are data, with a notion of `storage class`
+Type and Class are data, with a notion of "storage class" denoted by `@`
 
 ```rust
 int@type:i32
