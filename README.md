@@ -31,7 +31,8 @@ Int@class:(value:int)[
 ```
 
 Name will implicitly determine whether the field is accessible.
-The class example above naturally defined accessibility of members.
+
+The class example above naturally defined accessibility of members:
 
 - `num.data` : This is an error, as symbol not defined as `.data`.
 - `numdata` : This is regarded as a new variable, not `a`'s member.
