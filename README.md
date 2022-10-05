@@ -67,7 +67,8 @@ dynamicString@heap="string at heap segment"
 
 There is only one operand required for `?`, like `condition? x`.
 
-There is no `else`, use `||` instead. Concatenate `|| y` behind the expression above.
+There is no `else`, use `||` instead. Append `|| y` behind the expression above.
+
 ```rust
 (a > b)? {
     diff = a - b
