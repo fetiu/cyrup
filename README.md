@@ -67,7 +67,7 @@ dynamicString@heap="string at heap segment"
 
 It's not ternary operator `condition? x : y`. There is only one operand required for `?`, like `condition? x`.
 
-There is no `else`, use `||` instead. Append `|| y` behind the expression above.
+There is no `else` or `:`, use `||` instead. Append "|| y" behind the preceding conditional expression.
 
 ```rust
 (a > b)? {
