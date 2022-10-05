@@ -63,9 +63,9 @@ dynamicString@heap="string at heap segment"
 
 ## Conditional `?`
 
-`if` statement is replaced with `?`. It's differnt from the ternary operator `condition? x : y`.
+`if` statement is replaced with `?`. 
 
-There is only one operand required for `?`, like `condition? x`.
+It's not ternary operator `condition? x : y`. There is only one operand required for `?`, like `condition? x`.
 
 There is no `else`, use `||` instead. Append `|| y` behind the expression above.
 
