@@ -63,7 +63,7 @@ Don't worry, `*` still is a multiplication. Let's see some examples first.
 }
 ```
 
-Please regard the product `{}` multiplied by 3 as a "statment copied and called exactly 3 times".
+Please regard the product `{}` multiplied by `3` as a "statment copied and called exactly 3 times".
 
 ```rust
 {print("reapeat only 3 times")}
@@ -114,8 +114,8 @@ key == * (
 ```
 
 - `true * {}` repeats the braces forever, like `while`. (think `true` is equivalent to infinite)
-- `i:(1..10) * {}` iterates from 1 to 10, like `for(int i=0; i < 10; i++){}`.
-- `key == * ()` matches keys to corresponding function call, like `switch`.
+- `i:(1..10) * {}` iterates from 1 to 10, like `for(i = 0; i < 10; i++){}`.
+- `key == * ()` matches keys to the corresponding function, like `switch`.
 
 **_(WIP below)_**
 
