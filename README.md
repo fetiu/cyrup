@@ -22,7 +22,7 @@ a:int=1
 b:2
 c:Int(1)
 f:(d:int, e:int){
-    -> d + e
+    => d + e
 }
 ```
 
@@ -55,27 +55,29 @@ There is no `else` or `:`, use `||` instead. Append "|| y" behind the preceding 
 
 `while`, `for`, `switch` statements are replaced with `*`.
 
-Don't worry! `*` still is a multiplication.
+Don't worry, `*` still is a multiplication. Let's see some examples first.
 
-Let's see some examples first.
-
-```
+```rust
 3 * {
     print("reapeat only 3 times")
 }
 ```
 
-Please regard the product `{}` multiplied by 3 as `{}` copied and called exactly 3 times.
+Please regard the product `{}` multiplied by 3 as a "statment copied and called exactly 3 times".
 
-```
+```rust
 {print("reapeat only 3 times")}
 {print("reapeat only 3 times")}
 {print("reapeat only 3 times")}
 ```
+
+It may look inefficient, but let's leave the optimization as compiler's responsibility.
+
+<br> 
 
 We can iterate elements of an array by using **distributive property** of expression.
 
-```
+```rust
 elems:=(1,2,3,4)
 
 e:elems * {
@@ -85,7 +87,7 @@ e:elems * {
 
 The product above will ditribute `{}` to each elements of `elems`.
 
-```
+```rust
 {print("%d in elems", 1)}
 {print("%d in elems", 2)}
 {print("%d in elems", 3)}
@@ -94,7 +96,7 @@ The product above will ditribute `{}` to each elements of `elems`.
 
 By now, you'll get the sense of how the statements below would work.
 
-```
+```rust
 true * {
     print("hello world!")
 }
@@ -111,9 +113,11 @@ key == * (
 )
 ```
 
-- `true * {}` repeats the braces forever, like `while`. (think `true` ~ infinite)
+- `true * {}` repeats the braces forever, like `while`. (think `true` is equivalent to infinite)
 - `i:(1..10) * {}` iterates from 1 to 10, like `for(int i=0; i < 10; i++){}`.
 - `key == * ()` matches keys to corresponding function call, like `switch`.
+
+**_(WIP below)_**
 
 ## Storage Class `@`
 
@@ -123,12 +127,12 @@ Here is the example of type & class declaration with Storage Class.
 
 ```rust
 int@type:i32
-Int@class:(value:int)[
-    data:int = value
+Int@class:(
+    data:int
     .equals:(value:int)bool{
-        ->(data==value)
+        =>(data==value)
     }
-]
+)
 ```
 
 Naming conventions will determine whether the field is accessible.
@@ -145,7 +149,7 @@ In this way, data is capsulized without explicitly notating `public` or `private
 Storage Classes are also used for designating the data lifetime and scope
 
 ```rust
-globalString@data:= "string at data segement"
-localString@stack:= "string at stack segment"
+globalString@data := "string at data segement"
+localString@stack := "string at stack segment"
 dynamicString@heap:= "string at heap segment"
 ```
