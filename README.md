@@ -1,5 +1,6 @@
-# `c:`
-C-like language with some colon magics :)
+# `cyrup`
+
+Cyrup that triggers syntactic diabetes.
 
 ```rust
 main:(stdio){
