@@ -8,6 +8,8 @@ main:(stdio){
 }
 ```
 
+All syntaxes are defined with only a few special characters, not even a keyword.
+
 ## Declaration `:`
 
 There are a few basic rules.
@@ -26,7 +28,7 @@ f:(d:int, e:int){
 }
 ```
 
-Accesing declared data is the same as the languages we're used to.
+Using declared data is the same as the other computer languages we're used to.
 
 - `a = b`  assigns 2 to a variable
 - `c.equals(a)` : returns true
@@ -35,11 +37,11 @@ Accesing declared data is the same as the languages we're used to.
 
 ## Conditional `?`
 
-`if` statement is replaced with `?`. 
+`if` statement has been replaced with `?`. 
 
-It's not ternary operator `condition? x : y`. There is only one operand required for `?`, like `condition? x`.
+It's not the ternary operator `condition? x : y`. There is only one operand required after `?`, like `condition? x`.
 
-There is no `else` or `:`, use `||` instead. Append "|| y" behind the preceding conditional expression.
+There is no `else` or `:`. We use `||` instead. Append "|| y" behind the preceding conditional expression. It'll reach there when the condition is false.
 
 ```rust
 (a > b) ? {
@@ -53,9 +55,9 @@ There is no `else` or `:`, use `||` instead. Append "|| y" behind the preceding 
 
 ## Product `*`
 
-`while`, `for`, `switch` statements are replaced with `*`.
+`while`, `for`, `switch` statements have been replaced with `*`.
 
-Don't worry, `*` still is a multiplication. Let's see some examples first.
+It may seem quite new, but `*` still is a multiplication. Let's see some examples first.
 
 ```rust
 3 * {
@@ -71,11 +73,11 @@ Please regard the product `{}` multiplied by `3` as a "statment copied and calle
 {print("reapeat only 3 times")}
 ```
 
-It may look inefficient, but let's leave the optimization as compiler's responsibility.
+This looks inefficient, but let the compilers find an optimal way to run this code.
 
 <br> 
 
-We can iterate elements of an array by using **distributive property** of expression.
+We can iterate elements of an array by using **distributive property** of expressions.
 
 ```rust
 elems:=(1,2,3,4)
@@ -94,7 +96,7 @@ The product above will ditribute `{}` to each elements of `elems`.
 {print("%d in elems", 4)}
 ```
 
-By now, you'll get the sense of how the statements below would work.
+By now, I believe you can get the sense of how the statements below would work.
 
 ```rust
 true * {
@@ -113,7 +115,7 @@ key == * (
 )
 ```
 
-- `true * {}` repeats the braces forever, like `while`. (think `true` is equivalent to infinite)
+- `true * {}` repeats forever, like `while`. (think `true` is equivalent to infinite)
 - `i:(1..10) * {}` iterates from 1 to 10, like `for(i = 0; i < 10; i++){}`.
 - `key == * ()` matches keys to the corresponding function, like `switch`.
 
@@ -121,7 +123,7 @@ key == * (
 
 ## Storage Class `@`
 
-Type and Class are data, with a notion of "Storage Class" denoted by `@`.
+Type and Class are data, with a notion of *Storage Class* denoted by `@`.
 
 Here is the example of type & class declaration with Storage Class.
 
@@ -130,7 +132,7 @@ int@type:i32
 Int@class:(
     data:int
     .equals:(value:int)bool{
-        =>(data==value)
+        => (data==value)
     }
 )
 ```
