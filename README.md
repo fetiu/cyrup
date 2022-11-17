@@ -1,6 +1,6 @@
 # `cyrup`
 
-Cyrup that triggers syntactic diabetes.
+Cyrup that may trigger syntactic diabetes.
 
 ```rust
 main:(stdio){
@@ -80,9 +80,9 @@ This looks inefficient, but let the compilers find an optimal way to run this co
 We can iterate elements of an array by using **distributive property** of expressions.
 
 ```rust
-elems:=(1,2,3,4)
+elems:=[1,2,3,4]
 
-e:elems * {
+(e:elems) * {
     print("%d in elems", e)
 }
 ```
@@ -103,7 +103,7 @@ true * {
     print("hello world!")
 }
 
-i:(1..10) * {
+(i:1~10) * {
     print("number %d", i)
 }
 
@@ -116,7 +116,7 @@ key == * (
 ```
 
 - `true * {}` repeats forever, like `while`. (think `true` is equivalent to infinite)
-- `i:(1..10) * {}` iterates from 1 to 10, like `for(i = 0; i < 10; i++){}`.
+- `(i:1~10) * {}` iterates from 1 to 10, like `for(i = 0; i < 10; i++){}`.
 - `key == * ()` matches keys to the corresponding function, like `switch`.
 
 **_(WIP below)_**
