@@ -3,8 +3,9 @@
 Cyrup that may trigger syntactic diabetes.
 
 ```rust
-main:(stdio){
-    stdio.print("hello world")
+:stdio
+main(){
+    printf("hello world")
 }
 ```
 
@@ -21,9 +22,10 @@ Example declarations below:
 
 ```rust
 a:int=1
-b:2
-c:Int(1)
-f:(d:int, e:int){
+b:int=>2
+c:Int={1}
+f:(d:int, e:int) => d + e
+g:(d:int, e:int){
     => d + e
 }
 ```
