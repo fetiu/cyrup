@@ -5,7 +5,7 @@ Cyrup that may trigger syntactic diabetes.
 ```rust
 :stdio
 main(){
-    printf("hello world")
+    print("hello world")
 }
 ```
 
